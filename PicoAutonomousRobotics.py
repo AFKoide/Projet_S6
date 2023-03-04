@@ -83,7 +83,7 @@ class KitronikPicoRobotBuggy:
         nop()         .side(1)
         label("skip")
         jmp(y_dec, "loop") #count down y by 1 and jump to pwmloop. When y is 0 we will go back to the 'pull' command
-             
+
     #doesnt actually register/unregister, just stops and starts the servo PIO
     def registerServo(self,servo):
         if(not self.servos[servo].active()):
@@ -91,7 +91,7 @@ class KitronikPicoRobotBuggy:
     def deregisterServo(self, servo):
         if(self.servos[servo].active()):
             self.servos[servo].active(0)
- 
+
     # goToPosition takes a degree position for the serov to goto. 
     # 0degrees->180 degrees is 0->2000us, plus offset of 500uS
     #1 degree ~ 11uS.
