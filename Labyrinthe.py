@@ -13,6 +13,7 @@ import _thread
 
 
 def thread0_Lumiere(status):
+    global status
     while True:
         if status == 0:
             buggy.setLED(2,buggy.WHITE)
@@ -46,7 +47,7 @@ etat = 0
 def ButtonIRQHandler(pin):
     global etat
     etat=etat+1
-    etat=etat%2
+    etat=etat%
     buggy.beepHorn()
     sleep(1)
 
@@ -54,9 +55,10 @@ buggy.button.irq(trigger=machine.Pin.IRQ_RISING, handler =  ButtonIRQHandler)
 
 vitesse_gauche = 50
 vitesse_droit = 50
+status = 0
 
 def thread1_Commande():
-    global vitesse_gauche, vitesse_droit
+    global vitesse_gauche, vitesse_droit, status, etat
     while True:
         gauche = buggy.getRawLFValue("l")
         droite = buggy.getRawLFValue("r")
@@ -66,8 +68,11 @@ def thread1_Commande():
             pass
         elif etat == 1:
             status = "avant"
-            
-        else :
+            buggy.motorOn("l","f",vitesse_gauche);buggy.motorOn("r","f",vitesse_droit)
+
+            if buggy.isLFSensorLight is True:
+                
+        else:
             status = "erreur"
 
 
