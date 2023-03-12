@@ -47,7 +47,7 @@ etat = 0
 def ButtonIRQHandler(pin):
     global etat
     etat=etat+1
-    etat=etat%
+    etat=etat%3
     buggy.beepHorn()
     sleep(1)
 
@@ -70,7 +70,7 @@ def thread1_Commande():
             status = "avant"
             buggy.motorOn("l","f",vitesse_gauche);buggy.motorOn("r","f",vitesse_droit)
 
-            if buggy.isLFSensorLight is True:
+            if buggy.isLFSensorLight("l") is True:
                 
         else:
             status = "erreur"
