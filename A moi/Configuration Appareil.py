@@ -1,4 +1,4 @@
-# Utilisé pour configurer la machine et prendre en main le code
+# Utilisé pour configurer la machine
 
 from PicoAutonomousRobotics import KitronikPicoRobotBuggy
 from time import sleep_us, sleep, sleep_ms
