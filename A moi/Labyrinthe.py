@@ -9,7 +9,7 @@
 from PicoAutonomousRobotics import KitronikPicoRobotBuggy
 buggy = KitronikPicoRobotBuggy()
 from time import sleep_us, sleep, sleep_ms
-import _thread
+ 
 
 
 def thread0_Lumiere(status):
