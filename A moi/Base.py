@@ -26,9 +26,7 @@ while True:
     centre = buggy.isLFSensorLight("c")
     devant = buggy.getDistance("f")
 
-    if etat is 0:
-        pass
-    elif etat is 1:
+    if etat is 1:
         buggy.motorOn("l","f",vdroite);buggy.motorOn("r","f",vgauche)
 
     if centre is False:
