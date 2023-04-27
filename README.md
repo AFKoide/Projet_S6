@@ -1,14 +1,12 @@
-# Kitronik-Pico-Autonomous-Robotics-Platform-MicroPython
-A class and sample code for the Kitronik Autonomous Robotics Platform for the Raspberry Pi Pico. (www.kitronik.co.uk/5335)
+# Projet S6 Robot suiveur de ligne
+Projet de second semestre de 3° année de licence EEA à l'université de Montpellier.
+Il est question de piloter un robot suiveur de ligne de la marque *Kitronik Autonomous Robotics Platform* utilisant une *Raspberry Pi MicroPi*. (www.kitronik.co.uk/5335)
 
-This is the MicroPython version. For Circuit Python see: 
-https://github.com/KitronikLtd/Kitronik-Pico-Autonomous-Robotics-Platform-CircuitPython
 
-On the Autonomous Robotics Platform:  
-* Forward is defined as the end away from the power switch / castor  
-* Left and Right are defined when facing Forward  
-* The Pico should be inserted with the USB connector facing the rear (away from the Pen hole)  
-  
+
+
+# Mode d'emploi de la bibliothèse PicoAutonomousRobotics.py
+
 To use, save PicoAutonomousRobotics.py file onto the Pico so it can be imported.
 ## Import PicoAutonomousRobotics.py and construct an instance:
 ```python
